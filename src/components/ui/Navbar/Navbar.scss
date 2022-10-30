@@ -1,0 +1,25 @@
+.Navbar {
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+
+  .Navbar__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+
+    .Navbar__logo--icon {
+      margin-right: 10px;
+    }
+
+    .Navbar__logo--header {
+      font-style: italic;
+      font-weight: lighter;
+    }
+  }
+}
+
+
