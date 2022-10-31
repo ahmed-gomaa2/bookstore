@@ -9,6 +9,8 @@ const SearchBar = props => {
     const formSubmitHandler = e => {
         e.preventDefault();
         props.fetchBooks(query);
+        setQuery('');
+        e.target.parentElement.blur()
     }
 
     return (

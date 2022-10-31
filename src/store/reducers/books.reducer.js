@@ -19,7 +19,15 @@ export default function(state = initialState, action) {
                     books: action.books.data.items
                 }
             }
-
+        case actionTypes.FETCH_DATA_RECOMMENDED_SUCCESS:
+            const addedRecommended = {
+                query: action.query,
+                books: action.books.data.items
+            }
+            return {
+                ...state,
+                recommended: [...state.recommended, addedRecommended]
+            }
         default:
             return state;
     }

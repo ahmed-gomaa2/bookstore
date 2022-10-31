@@ -12,7 +12,7 @@ const Book = props => {
     }
 
     return (
-        <div className={'Book'}>
+        <div className={`Book ${props.index % 2 === 0 && 'Book__even'}`}>
             <div className="Book__thumbnail">
                 <img src={props.book?.volumeInfo?.imageLinks?.thumbnail} alt="cover image"/>
             </div>
@@ -25,6 +25,9 @@ const Book = props => {
                 </div>
                 <div className="Book__info">
                     <p>{getOnlyFiftyWords(props.book.volumeInfo.description || '')}</p>
+                    <div className="Book__info--links">
+                        <a target={'_blank'} href={props.book?.volumeInfo.infoLink} className={'Book__info--links-more'}><span >More</span></a>
+                    </div>
                 </div>
                 <div className="Book__burger">
                     <div></div>

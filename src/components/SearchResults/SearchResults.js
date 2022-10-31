@@ -58,7 +58,7 @@ const SearchResults = props => {
             ): (
                 <div className="SearchResults__books">
                     {getTheCurrentPageBooks()?.map((book, index) => {
-                        return <Book book={book} key={index} />
+                        return <Book book={book} key={index} index={index} />
                     })}
                 </div>
             )}
@@ -69,10 +69,4 @@ const SearchResults = props => {
     );
 };
 
-const mapStateToProps = state => {
-    return {
-        search: state.search.search
-    }
-}
-
-export default connect(mapStateToProps) (SearchResults);
+export default SearchResults;

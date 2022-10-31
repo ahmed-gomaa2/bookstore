@@ -3,7 +3,7 @@
   flex-direction: row;
   height: auto;
   margin-bottom: 20px;
-  border: 1px solid black;
+  border: 1px solid lightgray;
   padding: 20px;
   position: relative;
   //padding: 20px 20px 20px 0;
@@ -31,13 +31,45 @@
     .Book__header {
       margin-bottom: 20px;
     }
+    .Book__info {
+      display: flex;
+      flex-direction: column;
+
+
+      .Book__info--links {
+        margin-left: auto;
+        margin-top: auto;
+
+        .Book__info--links-more {
+          width: 60px;
+          height: 30px;
+          background: lightgreen;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          cursor: pointer;
+          color: black;
+          outline: none;
+          text-decoration: none;
+          transition: all ease-in-out 0.2s;
+
+          &:hover {
+            background: green;
+            color: white;
+          }
+
+        }
+      }
+    }
   }
 
   .Book__burger {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 25px;
+    width: 20px;
     height: 15px;
     position: absolute;
     top: 10px;
@@ -46,10 +78,15 @@
     cursor: pointer;
 
     div{
-      width: 5px;
-      height: 5px;
+      width: 3px;
+      height: 3px;
       border-radius: 50%;
       background: black;
     }
   }
 }
+
+  .Book__even {
+    background: rgba(255, 255, 200, .3);
+    //display: none;
+  }
