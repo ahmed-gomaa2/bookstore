@@ -1,7 +1,7 @@
 .Navbar {
   height: 60px;
   width: 100%;
-  background-color: white;
+  background: white;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -9,6 +9,7 @@
   box-shadow: 0 0 10px rgba(0, 200, 255, .5);
   z-index: 100;
   opacity: 0.95;
+  transition: opacity ease-in-out 0.1s, background ease-in-out 0.1s, color ease-in-out 0.1s;
 
   .Navbar__logo {
     display: flex;
@@ -31,9 +32,8 @@
   position: sticky;
   top: 0;
   left: 0;
-  background: white;
-  transition: all ease-in-out 0.2s;
-
+  background: black;
+  color: white;
 }
 
 

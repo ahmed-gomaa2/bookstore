@@ -8,6 +8,7 @@ const Navbar = props => {
         const dummy = document.querySelector('.Navbar__dummy')
         const stickyNav = (entries, observer) => {
             const [entry] = entries;
+
             if(!entry.isIntersecting) nav.classList.add('Navbar__sticky');
             else nav.classList.remove('Navbar__sticky');
         }
