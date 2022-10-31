@@ -4,7 +4,6 @@ import {fetchBooks, fetchRecommended} from "./store/actions/books.action";
 import {useEffect} from "react";
 import Navbar from "./components/ui/Navbar/Navbar";
 import SearchResults from "./components/SearchResults/SearchResults";
-import {Routes} from "react-router-dom";
 
 function App(props) {
     useEffect(() => {
