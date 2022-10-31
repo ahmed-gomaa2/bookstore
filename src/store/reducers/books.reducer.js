@@ -1,8 +1,12 @@
 import * as actionTypes from '../actions/action.types';
 
 const initialState = {
-    query: '',
-    books: []
+    search: {
+        query: '',
+        books: []
+    },
+    recommended: []
+
 }
 
 export default function(state = initialState, action) {
@@ -10,9 +14,12 @@ export default function(state = initialState, action) {
         case actionTypes.FETCH_DATA_FROM_API_SUCCESS:
             return {
                 ...state,
-                query: action.query,
-                books: action.books.data.items
+                search: {
+                    query: action.query,
+                    books: action.books.data.items
+                }
             }
+
         default:
             return state;
     }
