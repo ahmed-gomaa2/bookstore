@@ -8,7 +8,7 @@ import SearchResults from "./components/SearchResults/SearchResults";
 function App(props) {
     useEffect(() => {
         ['gaming', 'food', 'psychology'].map((query, index) => {
-            props.fetchRecommended(query);
+            return props.fetchRecommended(query);
         });
     }, []);
 
